@@ -1,5 +1,5 @@
 class CodabrasController < ApplicationController
-  before_filter :login_required, only: :edit
+  before_filter :login_required, only: [:edit, :update, :destroy]
   before_filter :no_login_required, only: [:new, :create]
 
   respond_to :html, :json

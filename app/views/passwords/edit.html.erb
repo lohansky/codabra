@@ -1,6 +1,6 @@
 <h1>Setting new password</h1>
 
-<%= form_for @codabra do |f| %>
+<%= form_for @codabra, url: password_path(@codabra.password_salt) do |f| %>
 
   <% if @codabra.errors.any? %>
     <div id="error_explanation">

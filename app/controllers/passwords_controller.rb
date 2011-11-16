@@ -11,10 +11,10 @@ class PasswordsController < ApplicationController
     @codabra = Codabra.find_by_email(params[:email])
     if @codabra
       @codabra.deliver_password_reset_instructions!
-      flash[:notice] = I18n.t(:'success.password_reset_instructions_sent')
+      flash[:notice] = t(:'passwords.instruction.success')
       redirect_to root_path
     else
-      flash[:notice] = I18n.t(:'errors.couldn_sent_password_reset_instructions')
+      flash[:notice] = t(:'passwords.instruction.errors')
       render :action => :new
     end
   end
@@ -25,13 +25,13 @@ class PasswordsController < ApplicationController
 
   # PUT /passwords/1
   def update
-    @codabra.password = params[:user][:password]
-    @codabra.password_confirmation = params[:user][:password_confirmation]
+    @codabra.password = params[:codabra][:password]
+    @codabra.password_confirmation = params[:codabra][:password_confirmation]
     if @codabra.save
-      flash[:notice] = t(:'common.success.updated', model: t(:'entity.password'))
+      flash[:notice] = t(:'codabra.update.success')
       redirect_to profile_path(@codabra.name)
     else
-      flash[:alert] = t(:'common.errors.updated', model: t(:'entity.password'))
+      flash[:alert] = t(:'codabra.update.errors')
       render :edit
     end
   end

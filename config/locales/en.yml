@@ -8,6 +8,10 @@ en:
     unauthorized: "Unauthorized"
     must_login: "You must login"
     forbidden: "Forbidden"
+  passwords:
+    instruction:
+      success: "Password reset instructions has sent"
+      errors: "Password reset instructions couldn't be sent"
   links:
     ok: "OK"
     sign_in: "Sign in"
@@ -25,10 +29,9 @@ en:
     test: "Test"
     recover_password: "I forgot my password"
   codabra:
-    activation:
-      success: "Activation was complete successfully."
     update:
       success: "Codabra was successfully updated."
+      errors: "Codabra wasn't successfully updated."
   registration:
     success: "Registration was complete successfully."
     errors: "Registration wasn't complete."
