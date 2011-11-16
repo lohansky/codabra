@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+cariba:
+  id: 1
+  type: Battle::Cariba
+  creator_id: 1
+  player_id: 2
+  status: new
+  winner_id: nil
+  creator_program_id: 1
+  player_program_id: 2
+
+two:
+  id: 2
+  type: Battle::Cariba
+  creator_id: 2
+  player_id: nil
+  status: MyString
+  winner_id: nil
+  creator_program_id: 2
+  player_program_id: nil

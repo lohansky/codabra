@@ -1,0 +1,7 @@
+university
+starting w/out signing up
+fix infinity battles
+tests
+error catchers
+several workers for battlesd
+find & fix daemons.gem error (there is exception after stopping battlesd)

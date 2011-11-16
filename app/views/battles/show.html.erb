@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<br />
+
+<p>
+  <b>Battle:</b> <%= @battle.battle_type.name %>
+</p>
+
+<p>
+  <b>Creator:</b> <%= @battle.creator.name %> (<%= @battle.creator_program.name %>)
+</p>
+
+<p>
+  <b>Player:</b> <%= @battle.player.name %> (<%= @battle.player_program.name %>)
+</p>
+
+<% if @battle.winner %>
+<p>
+  <b>Winner:</b> <%= @battle.winner.name %> (<%= @battle.winner_program.name %>)
+</p>
+<% end %>
+
+<p>
+  <b>Status:</b> <%= @battle.status %>
+</p>
+
+<br />
+
+<pre id="log">loading...</pre>
+
+<br />
+
+<% if current_codabra == @battle.creator and @battle.status == 'new' %>
+	<%= button_link_to t(:'links.remove'), battle_path(@battle), method: :delete if current_codabra == @battle.creator %>
+<% end %>

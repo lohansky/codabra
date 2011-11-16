@@ -1,0 +1,24 @@
+<h1>Setting new password</h1>
+
+<%= form_for @codabra do |f| %>
+
+  <% if @codabra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@codabra.errors.count, "error") %> prohibited from being saved:</h2>
+
+      <ul>
+      <% @codabra.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :password, t(:'site.password_reset.new_password') %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.label :password_confirmation, t(:'site.password_reset.confirm_password') %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+  <%= f.submit 'Change' %>
+<% end %>

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Codabra::Application.load_tasks
+CodabraWorld::Application.load_tasks

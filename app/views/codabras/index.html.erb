@@ -1,0 +1,21 @@
+<h1>Listing codabras</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Level</th>
+    <th>Wins</th>
+  </tr>
+
+<% @codabras.each do |codabra| %>
+  <tr>
+    <td><%= link_to codabra.name, profile_path(codabra.name) %></td>
+    <td><%= codabra.email %></td>
+    <td><%= codabra.level %></td>
+    <td><%= codabra.wins_count %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

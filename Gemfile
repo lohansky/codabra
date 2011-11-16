@@ -19,6 +19,13 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'authlogic'
+gem 'aasm'
+gem 'css3buttons'
+gem 'amqp'
+gem 'bunny'
+gem 'daemons'
+gem 'formtastic'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

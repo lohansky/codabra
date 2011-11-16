@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: Codabra1
+  level: 1
+  email: codabra1@codabra.com
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  perishable_token: MyString
+  active: true
+  locale: en
+
+two:
+  id: 2
+  name: Codabra2
+  level: 1
+  email: codabra2@codabra.com
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  perishable_token: MyString
+  active: true
+  locale: en

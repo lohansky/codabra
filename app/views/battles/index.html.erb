@@ -1,0 +1,6 @@
+<%= render 'list', battles: @presenter.my_battles, header: 'My battles', show_rounds: false if logged_in? %>
+<%= render 'list', battles: @presenter.new_battles, header: 'Available battles', show_rounds: false %>
+<%= render 'list', battles: @presenter.fighting_battles, header: 'Current battles', show_rounds: true %>
+<%= render 'list', battles: @presenter.recent_battles, header: 'Recent battles', show_rounds: true %>
+
+<%= button_link_to 'New Battle', new_battle_path if logged_in? %>

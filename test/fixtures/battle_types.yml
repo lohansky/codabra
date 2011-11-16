@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Cariba
+  code_template: puts "XXX"
+  battle_class: Battle::Cariba
+
+two:
+  name: Rudabr
+  code_template: puts "XXX"
+  battle_class: Battle::Cariba

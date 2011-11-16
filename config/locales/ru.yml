@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  errors:
+    wrong_login_or_password: "Неправильный логин или пароль"
+    must_be_logged_out: "Вы должны выйти"
+    unauthorized: "Нет прав"
+    must_login: "Вы должны войти"
+    forbidden: "Нет доступа"
+  links:
+    create_codabra: "Создать Кодабру"
+    sign_in: "Войти"
+    sign_up: "Рега"
+    sign_out: "Выход"
+  codabra:
+    update:
+      success: "Кодабра успешно обновлена."

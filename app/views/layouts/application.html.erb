@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
 <head>
   <title>Codabra</title>
+  <meta charset="UTF-8" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav>
+		<%= link_to t(:'links.codabras'), codabras_path %> |
+		<%= link_to t(:'links.arena'), arena_path %> |
+	<% if logged_in? %>
+		<%= link_to t(:'links.programs'), programs_path %> |
+		<%= link_to t(:'links.profile'), profile_path(current_codabra.name) %> |
+		<%= link_to t(:'links.sign_out'), signout_path %>
+	<% else %>
+		<%= link_to t(:'links.sign_in'), signin_path %> |
+		<%= link_to t(:'links.sign_up'), signup_path %>
+	<% end %>
+	</nav>
 
 <%= yield %>
 

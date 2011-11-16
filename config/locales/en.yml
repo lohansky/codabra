@@ -2,4 +2,47 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  errors:
+    wrong_login_or_password: "Wrong login or password"
+    must_be_logged_out: "You must be logged out"
+    unauthorized: "Unauthorized"
+    must_login: "You must login"
+    forbidden: "Forbidden"
+  links:
+    ok: "OK"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+    sign_out: "Sign out"
+    profile: "Profile"
+    arena: "Arena"
+    programs: "Programs"
+    edit: "Edit"
+    remove: "Remove"
+    codabras: "Codabras"
+    fight: "Fight"
+    detail: "Detail"
+    back: "Back"
+    test: "Test"
+    recover_password: "I forgot my password"
+  codabra:
+    activation:
+      success: "Activation was complete successfully."
+    update:
+      success: "Codabra was successfully updated."
+  registration:
+    success: "Registration was complete successfully."
+    errors: "Registration wasn't complete."
+  notifier:
+    subjects:
+      activation_instructions: "Activation instructions"
+      password_reset_instructions: "Password reset instructions"
+  headers:
+    sign_in: "Sign in"
+  fields:
+    labels:
+      email: "Email"
+      name: "Name"
+      password: "Password"
+  languages:
+    english: "English"
+    russian: "Russian"

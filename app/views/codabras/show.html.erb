@@ -1,0 +1,15 @@
+<br />
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b> <%= @codabra.name %>
+</p>
+
+<p>
+  <b>Level:</b> <%= @codabra.level %>
+</p>
+
+<br />
+
+<%= button_link_to 'Edit', edit_profile_path(@codabra.name) if current_codabra == @codabra %>

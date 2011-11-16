@@ -1,0 +1,30 @@
+<tr>
+  <td><%= battle.battle_type.name %></td>
+  <td><%= link_to battle.creator.name, profile_path(battle.creator.name) %></td>
+  <td><%= battle.creator_program.name %></td>
+  <td><%= battle.player && link_to(battle.player.name, profile_path(battle.player.name)) || '?' %></td>
+  <td><%= battle.player_program && battle.player_program.name || '?' %></td>
+  <td><%= battle.status %></td>
+  <td><%= battle.winner && link_to(battle.winner.name, profile_path(battle.winner.name)) || '?' %></td>
+<% if show_rounds %>
+  <td><%= battle.rounds %></td>
+<% end %>
+<% if logged_in? %>
+  <td>
+    <%= button_link_to t(:'links.detail'), battle_path(battle) if battle.status != 'new' %>
+    <% if current_codabra != battle.creator and battle.status == 'new' %>
+      <%= button_group do %>
+        <%= form_for(battle, as: :battle, html: { class: 'fight' }, url: fight_battle_path(battle)) do |f| %>
+          <%= f.select :player_program_id, @presenter.my_programs.collect { |p| [p.name, p.id] } %>
+          <%= button_submit_tag t(:'links.fight') %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </td>
+  <td>
+    <% if current_codabra == battle.creator and battle.status == 'new' %>
+      <%= negative_button_link_to t(:'links.remove'), battle_path(battle), confirm: 'Are you sure?', method: :delete %>
+    <%end %>
+  </td>
+<% end %>
+</tr>

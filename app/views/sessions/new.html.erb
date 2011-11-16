@@ -1,0 +1,18 @@
+<h1><%= t(:'headers.sign_in') %></h1>
+
+<%= form_for(@session, url: session_path) do |f| %>
+  <div class="field">
+    <%= f.label t(:'fields.labels.name') %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label t(:'fields.labels.password') %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= button_submit_tag t(:'links.sign_in') %>
+  </div>
+<% end %>
+
+<%= link_to t(:'links.recover_password'), new_password_path %>

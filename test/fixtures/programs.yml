@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: MyText
+  owner_id: 1
+  battle_class: Battle::Cariba
+  code: puts ['head', 'body', 'legs'].shuffle.first
+
+two:
+  id: 2
+  name: MyText
+  owner_id: 2
+  battle_class: Battle::Cariba
+  code: puts ['head', 'body', 'legs'].shuffle.first

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<br />
+
+<p>
+  <b>Name:</b> <%= @program.name %>
+</p>
+
+<p>
+  <b>Battle:</b> <%= @program.battle_type.name %>
+</p>
+
+<br />
+
+<pre><%= @program.code %></pre>
+
+<br />
+
+<%= button_group do %>
+	<%= button_link_to t(:'links.back'), programs_path %>
+	<%= button_link_to t(:'links.edit'), edit_program_path(@program) %>
+<% end %>

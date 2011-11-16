@@ -1,4 +1,4 @@
-Codabra::Application.configure do
+CodabraWorld::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -14,7 +14,10 @@ Codabra::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = {:host => "codabra.ru"}
+  config.action_mailer.delivery_method  =   :sendmail
+  config.action_mailer.perform_deliveries = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -27,4 +30,8 @@ Codabra::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation can not be found)
+  config.i18n.fallbacks = true
 end

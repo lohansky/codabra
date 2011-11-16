@@ -1,0 +1,29 @@
+<h1><%= header %></h1>
+
+  <% unless battles.empty? %>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Creator</th>
+        <th>Program</th>
+        <th>Player</th>
+        <th>Program</th>
+        <th>Status</th>
+        <th>Winner</th>
+      <% if show_rounds %>
+        <th>Rounds</th>
+      <% end %>
+      <% if logged_in? %>
+        <th></th>
+        <th></th>
+      <% end %>
+      </tr>
+      <% battles.each do |battle| %>
+        <%= render 'battle', battle: battle, show_rounds: show_rounds %>
+      <% end %>
+    </table>
+  <% else %>
+    <p>None</p>
+  <% end %>
+
+<br />

@@ -1,0 +1,33 @@
+<%= form_for(@program) do |f| %>
+  <% if @program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% @program.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :battle %><br />
+    <%= f.select :battle_class, @battle_types.collect { |bt| [bt.name, bt.battle_class] } %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br />
+    <% if @program.new_record? %>
+    	<%= f.text_area :code, value: @battle_types.first.code_template, cols: 80 %>
+    <% else %>
+    	<%= f.text_area :code, cols: 80 %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= button_submit_tag t(:'links.ok') %>
+  </div>
+<% end %>

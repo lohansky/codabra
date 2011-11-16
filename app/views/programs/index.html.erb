@@ -1,0 +1,30 @@
+<h1>Listing programs</h1>
+
+<table>
+  <tr>
+  	<th>Name</th>
+    <th>Battle</th>
+    <th>Wins</th>
+    <th></th>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+  	<td><%= program.name %></td>
+    <td><%= program.battle_type.name %></td>
+    <td><%= program.wins_count %></td>
+    <td><%= button_group do %>
+          <%= button_link_to t(:'links.detail'), program %>
+          <%= button_link_to t(:'links.edit'), edit_program_path(program) %>
+          <%= button_link_to t(:'links.test'), test_program_path(program) %>
+          <%= negative_button_link_to t(:'links.remove'), program, confirm: 'Are you sure?', method: :delete %>
+        <% end %>
+    </td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= button_link_to 'New Program', new_program_path %>

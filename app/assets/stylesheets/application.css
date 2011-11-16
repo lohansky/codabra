@@ -2,6 +2,51 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require css3buttons
  *= require_self
- *= require_tree . 
-*/
+ *= require_tree .
+ */
+
+nav {
+	padding: 10px;
+	width: 100%;
+	color: #FFFFFF;
+
+    background-color: #3C8DDE;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+nav a, nav a:visited {
+	color: #e2f0ff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 18px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding-top: 12px;
+	padding-bottom: 24px;
+}
+
+th {
+	font-weight: bold;
+}
+
+th, td {
+	padding: 5px;
+}
+
+
+.button.icon:before {
+    background: url(css3buttons/icons.png) 0 99px no-repeat;
+}
