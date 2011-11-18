@@ -1,7 +1,12 @@
+= functional =
+
+what do with infinity battles?
 university
-check login_required places
-starting w/out signing up
-fix infinity battles
+infinity battle queue
+starting w/out signing up (after profile layout)
+
+= refactoring/improving =
+
 tests
 error catchers
 several workers for battlesd
